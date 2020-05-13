@@ -1,0 +1,102 @@
+body{
+    background-color: maroon;
+}
+   /* 6- star */
+#star{
+    width:0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom:100px solid white;
+    position: relative;
+}
+#star:after{
+    width:0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top:100px solid white;
+    position: absolute;
+    content: "";
+    top:25px;
+    left:-50px;
+
+
+}
+   /* ribbon */
+.ribbon{
+    font-size: 16px !important;
+    width:50%;
+    position: relative;
+    background: white;
+    color:black;
+    text-align: center;
+    padding:2em;
+    margin: 100px;
+}
+.ribbon:before,.ribbon:after {
+    content: "";
+    position: absolute;
+    display:block;
+    bottom:-2em;
+    border:2em solid white;
+    z-index:-1;
+}
+.ribbon:before{
+    left:-3em;
+    border-right-width:2em;
+    border-left-color:transparent ;
+}
+.ribbon:after{
+    right:-3em;
+    border-left-width: 2em;
+    border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after{
+    content:'';
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color:black transparent transparent transparent;
+    bottom:-1em;
+
+}
+.ribbon .ribbon-content:before{
+    left:0;
+    border-width:1em 0 0 1em;
+}
+.ribbon .ribbon-content:after{
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+
+/* floating image */
+.box{
+    position: relative;
+}
+.img{
+    position:absolute;
+}
+.box1{
+    width:40%;
+    height:400px;
+    /* background-color: black; */
+    float:left;
+}
+.box2{
+    width:40%;
+    height:400px;
+    /* background-color: white; */
+    float:right;
+}
+.box1:before, .box2:before{
+    content:" ";
+    width:100px;
+    height: 400px;
+}
+.box1:before{
+    float:left;
+}
+.box2:before{
+    float:right;
+}
